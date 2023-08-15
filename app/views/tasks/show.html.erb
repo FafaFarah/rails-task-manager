@@ -1,0 +1,14 @@
+<div class="col-8 m-auto shadow-sm p-3 mb-5 bg-body rounded">
+  <div class="d-flex justify-content-between align-items-center">
+    <h1><%= @task.title %></h1>
+    <p><%= link_to "Edit the task", edit_task_path, class: "btn btn-secondary" %></p>
+  </div>
+  <div class="card-header fs-5" style="margin-top: 25px">
+    <%= @task.details %>
+  </div>
+
+  <%= @task.completed ? '✔️ This task is completed' : '❌ This task is not completed yet' %>
+  <div class="border-top" style="margin-top: 20px">
+    <%= link_to "🔙 Go back to the list", tasks_path, class: "text-decoration-none text-black fs-5" %>
+  </div>
+</div>

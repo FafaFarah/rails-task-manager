@@ -1,0 +1,17 @@
+<div class="col-8 m-auto shadow-sm p-3 mb-5 bg-body rounded">
+  <h1>Edit Task</h1>
+
+  <%= form_with model: @task do |f| %>
+    <%= f.label :title, class: "form-label" %>
+    <%= f.text_field :title, class: "form-control" %>
+    <%= f.label :details, class: "form-label" %>
+    <%= f.text_field :details, class: "form-control" %>
+    <%= f.check_box :completed, class: "form-check-input" %>
+    <%= f.label :completed, "Completed", class: "form-check-label" %>
+    <br>
+    <br>
+    <%= f.submit class: "btn btn-primary" %>
+  <% end %>
+  <br>
+  <p class="border-top"><%= link_to "🔙 Go back to the list", tasks_path, class: "text-decoration-none text-black fs-5" %></p>
+</div>
